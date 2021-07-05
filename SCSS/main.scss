@@ -1,0 +1,79 @@
+@import "_initial.scss";
+@import "_variable.scss";
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: $fontSize;
+  color: $DesaturatedRed;
+}
+
+.screen {
+  max-width: 1440px;
+  height: clamp(800px, 100vh, 1090px);
+  margin: 0 auto;
+  position: relative;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  .image {
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    margin-left: auto;
+    .hero {
+      height: 100%;
+    }
+  }
+
+  .v-logo-text {
+    position: absolute;
+    top: 65px;
+    left: 165px;
+    h1 {
+      font-size: 4rem;
+      font-weight: 400;
+      width: 6ch;
+      text-transform: uppercase;
+      margin-top: 130px;
+      color: black;
+      span {
+        font-weight: 300;
+        color: $DesaturatedRed;
+      }
+    }
+
+    p {
+      width: 45ch;
+      line-height: 1.58;
+      margin-top: 35px;
+    }
+
+    .input-box {
+      margin-top: 50px;
+      padding: 18px 30px;
+      width: 445px;
+      height: 55px;
+      border-radius: 30px;
+      border: 1px solid hsla(0, 0, 0, 0.3);
+      border: 1px solid $DesaturatedRed;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .send {
+      width: 100px;
+      height: 55px;
+      position: relative;
+      left: -105px;
+      top: 4px;
+      border-radius: 30px;
+      background: $GradientLinearDark;
+      border: none;
+      &:active {
+        opacity: 0.4;
+      }
+    }
+  }
+}

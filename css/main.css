@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  color: #ce9797;
+}
+
+.screen {
+  max-width: 1440px;
+  height: clamp(800px, 100vh, 1090px);
+  margin: 0 auto;
+  position: relative;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+}
+
+.screen .image {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0px;
+  margin-left: auto;
+}
+
+.screen .image .hero {
+  height: 100%;
+}
+
+.screen .v-logo-text {
+  position: absolute;
+  top: 65px;
+  left: 165px;
+}
+
+.screen .v-logo-text h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  width: 6ch;
+  text-transform: uppercase;
+  margin-top: 130px;
+  color: black;
+}
+
+.screen .v-logo-text h1 span {
+  font-weight: 300;
+  color: #ce9797;
+}
+
+.screen .v-logo-text p {
+  width: 45ch;
+  line-height: 1.58;
+  margin-top: 35px;
+}
+
+.screen .v-logo-text .input-box {
+  margin-top: 50px;
+  padding: 18px 30px;
+  width: 445px;
+  height: 55px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid #ce9797;
+}
+
+.screen .v-logo-text .input-box:focus {
+  outline: none;
+}
+
+.screen .v-logo-text .send {
+  width: 100px;
+  height: 55px;
+  position: relative;
+  left: -105px;
+  top: 4px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border: none;
+}
+
+.screen .v-logo-text .send:active {
+  opacity: 0.4;
+}
+/*# sourceMappingURL=main.css.map */
