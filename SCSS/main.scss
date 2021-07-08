@@ -14,15 +14,18 @@ body {
   background-image: url("../images/bg-pattern-desktop.svg");
   background-repeat: no-repeat;
   background-position-y: 50%;
+  display: flex;
   .image {
-    width: fit-content;
+    // width: fit-content;
+
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 0px;
-    margin-left: auto;
+    margin-left: 600px;
     .hero {
       height: 100%;
+      width: clamp(500px, 100%, 610px);
     }
   }
 
@@ -43,36 +46,73 @@ body {
       }
     }
 
-    p {
+    .paragraph {
       width: 45ch;
       line-height: 1.58;
-      margin-top: 35px;
+      margin: 35px 0 50px;
+    }
+    #input {
+      position: relative;
     }
 
     .input-box {
-      margin-top: 50px;
       padding: 18px 30px;
       width: 445px;
       height: 55px;
       border-radius: 30px;
       border: 1px solid hsla(0, 0, 0, 0.3);
       border: 1px solid $DesaturatedRed;
+      font-size: 1.25rem;
       &:focus {
         outline: none;
       }
     }
-
-    .send {
+    .icon-error {
+      position: absolute;
+      top: 18px;
+      left: 305px;
+      visibility: hidden;
+    }
+    .send-btn {
       width: 100px;
       height: 55px;
       position: relative;
       left: -105px;
-      top: 4px;
+      top: 2px;
       border-radius: 30px;
       background: $GradientLinearDark;
       border: none;
       &:active {
         opacity: 0.4;
+      }
+    }
+
+    .error-text {
+      margin-top: 10px;
+      margin-left: 35px;
+      color: $SoftRed;
+      visibility: hidden;
+    }
+  }
+}
+
+/* MEDIA */
+@media (max-width: 1275px) {
+  .screen {
+    .v-logo-text {
+      left: 100px;
+    }
+  }
+}
+
+@media (max-width: 975px) {
+  .screen {
+    width: clamp(300px, 100%, 600px);
+    .v-logo-text {
+      left: 100px;
+      text-align: center;
+      h1 {
+        margin: auto;
       }
     }
   }

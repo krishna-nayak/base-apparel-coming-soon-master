@@ -11,6 +11,10 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Frontend Mentor | Base Apparel coming soon page</title>
 
@@ -30,15 +34,23 @@
       <div class="v-logo-text">
         <img src="./images/logo.svg" alt="logo" />
         <h1><span> We're </span> coming soon</h1>
-        <p>
+        <p class="paragraph">
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
-        <input class="input-box" type="email" placeholder="Email Address" />
-        <button class="send" type="submit">
-          <img src="./images/icon-arrow.svg" alt="icon-arrow" />
-        </button>
+        <div id="input">
+          <input class="input-box" type="email" placeholder="Email Address" />
+          <img
+            src="./images/icon-error.svg"
+            alt="icon-error"
+            class="icon-error"
+          />
+          <button class="send-btn" type="submit">
+            <img src="./images/icon-arrow.svg" alt="icon-arrow" />
+          </button>
+        </div>
+        <p class="error-text">Please provide a valid email</p>
       </div>
       <div class="image">
         <img class="hero" src="./images/hero-desktop.jpg" alt="hero" />

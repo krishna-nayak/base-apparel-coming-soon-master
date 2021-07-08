@@ -22,22 +22,23 @@ body {
   background-image: url("../images/bg-pattern-desktop.svg");
   background-repeat: no-repeat;
   background-position-y: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .screen .image {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 0px;
-  margin-left: auto;
+  margin-left: 600px;
 }
 
 .screen .image .hero {
   height: 100%;
+  width: clamp(500px, 100%, 610px);
 }
 
 .screen .v-logo-text {
@@ -60,38 +61,76 @@ body {
   color: #ce9797;
 }
 
-.screen .v-logo-text p {
+.screen .v-logo-text .paragraph {
   width: 45ch;
   line-height: 1.58;
-  margin-top: 35px;
+  margin: 35px 0 50px;
+}
+
+.screen .v-logo-text #input {
+  position: relative;
 }
 
 .screen .v-logo-text .input-box {
-  margin-top: 50px;
   padding: 18px 30px;
   width: 445px;
   height: 55px;
   border-radius: 30px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border: 1px solid #ce9797;
+  font-size: 1.25rem;
 }
 
 .screen .v-logo-text .input-box:focus {
   outline: none;
 }
 
-.screen .v-logo-text .send {
+.screen .v-logo-text .icon-error {
+  position: absolute;
+  top: 18px;
+  left: 305px;
+  visibility: hidden;
+}
+
+.screen .v-logo-text .send-btn {
   width: 100px;
   height: 55px;
   position: relative;
   left: -105px;
-  top: 4px;
+  top: 2px;
   border-radius: 30px;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border: none;
 }
 
-.screen .v-logo-text .send:active {
+.screen .v-logo-text .send-btn:active {
   opacity: 0.4;
+}
+
+.screen .v-logo-text .error-text {
+  margin-top: 10px;
+  margin-left: 35px;
+  color: #f96262;
+  visibility: hidden;
+}
+
+/* MEDIA */
+@media (max-width: 1275px) {
+  .screen .v-logo-text {
+    left: 100px;
+  }
+}
+
+@media (max-width: 975px) {
+  .screen {
+    width: clamp(300px, 100%, 600px);
+  }
+  .screen .v-logo-text {
+    left: 100px;
+    text-align: center;
+  }
+  .screen .v-logo-text h1 {
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */
