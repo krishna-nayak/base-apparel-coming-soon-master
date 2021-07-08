@@ -5,21 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="./css/main.css" /> -->
     <title>Frontend Mentor | Base Apparel coming soon page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+      body {
+        font-family: "Josefin Sans", sans-serif;
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -29,33 +26,33 @@
       }
     </style>
   </head>
-  <body>
-    <div class="screen">
-      <div class="v-logo-text">
-        <img src="./images/logo.svg" alt="logo" />
-        <h1><span> We're </span> coming soon</h1>
-        <p class="paragraph">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
-        <div id="input">
-          <input class="input-box" type="email" placeholder="Email Address" />
-          <img
-            src="./images/icon-error.svg"
-            alt="icon-error"
-            class="icon-error"
-          />
-          <button class="send-btn" type="submit">
-            <img src="./images/icon-arrow.svg" alt="icon-arrow" />
-          </button>
-        </div>
-        <p class="error-text">Please provide a valid email</p>
+  <body class="bg-green-400">
+    <div class="h-20 flex items-center px-8">
+      <img src="./images/logo.svg" alt="logo" />
+    </div>
+    <div>
+      <img class="mx-auto object-cover w-full" src="./images/hero-mobile.jpg" alt="hero" />
+    </div>
+    <div class="my-20 font-normal">
+      <h1 class="text-6xl uppercase text-center tracking-widest">
+        <span class="font-light"> We're </span> <br />
+        coming <br />
+        soon
+      </h1>
+      <p class="text-center px-10 my-5">
+        Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+    </div>
+    <div class="px-8 relative mb-24">
+      <input class="w-full h-12 rounded-full px-6 text-base" type="email" placeholder="Email Address" />
+      <!-- <img src="./images/icon-error.svg" alt="icon-error" class="icon-error" /> -->
+      <div class="flex justify-end">
+        <button class="w-16 h-12 bg-blue-300 absolute top-0 flex justify-center items-center rounded-full" type="submit">
+          <img class="" src="./images/icon-arrow.svg" alt="icon-arrow" />
+        </button>
       </div>
-      <div class="image">
-        <img class="hero" src="./images/hero-desktop.jpg" alt="hero" />
-      </div>
+      <!-- <p class="error-text">Please provide a valid email</p> -->
     </div>
   </body>
-  <script src="emailValidation.js"></script>
+  <!-- <script src="emailValidation.js"></script> -->
 </html>
