@@ -16,9 +16,6 @@
       @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
       body {
         font-family: "Josefin Sans", sans-serif;
-        /* background-image: url("../images/bg-pattern-desktop.svg");
-        background-repeat: no-repeat;
-        background-position-y: 50%; */
       }
       button {
         background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
@@ -30,9 +27,8 @@
       }
 
       @media (max-width: 1024px) {
-        body {
-          background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
-          /* background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)); */
+        .contain {
+          background-image: linear-gradient(to top right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
         }
       }
       .attribution {
@@ -45,37 +41,43 @@
     </style>
   </head>
   <body class="relative">
-    <div class="contain max-w-screen-2xl mx-auto lg:px-16 h-screen 2xl:relative">
-      <div class="h-20 flex items-center px-8">
+    <div class="contain max-w-screen-2xl mx-auto xl:px-32 h-screen 2xl:relative">
+      <div class="h-20 flex items-center px-9 lg:py-16">
         <img src="./images/logo.svg" alt="logo" />
       </div>
       <div>
         <!-- 1020px < -->
         <img class="mx-auto object-cover w-full md:w-3/4 lg:hidden" src="./images/hero-mobile.jpg" alt="hero" />
         <!-- 1020px > or lg -->
-        <img class="h-full absolute top-0 right-0 hidden 2xl:h-auto lg:inline" src="./images/hero-desktop.jpg" alt="hero" />
+        <img class="min-h-full absolute top-0 right-0 hidden 2xl:h-auto lg:inline" src="./images/hero-desktop.jpg" alt="hero" />
       </div>
       <div class="my-20 font-normal text-center lg:text-left">
-        <h1 class="text-6xl uppercase tracking-widest lg:px-10">
+        <h1 class="text-6xl uppercase tracking-widest lg:px-9">
           <span class="font-light"> We're </span> <br />
           coming <br />
           soon
         </h1>
-        <p class="px-10 my-5 lg:w-2/5">
+        <p class="px-9 my-5 lg:w-2/5">
           Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch dealg.
         </p>
       </div>
-      <div class="px-8 max-w-md mx-auto relative mb-24 lg:mb-0 lg:ml-0">
-        <input class="w-full h-12 rounded-full px-6 text-base border-2 border-gray-200" type="email" placeholder="Email Address" />
-        <!-- <img src="./images/icon-error.svg" alt="icon-error" class="icon-error" /> -->
+      <div class="px-9 max-w-md mx-auto relative mb-24 lg:mb-0 lg:ml-0">
+        <input
+          class="w-full h-12 rounded-full px-6 text-base border-2 border-gray-200 focus:outline-none focus:border-red-200 focus:ring-blue-600"
+          type="email"
+          placeholder="Email Address"
+        />
+        <div class="flex justify-end items-center">
+          <img src="./images/icon-error.svg" alt="icon-error" class="hidden absolute top-3 right-28 lg:right-36" id="error-icon" />
+        </div>
         <div class="flex justify-end">
           <button class="w-16 h-12 bg-blue-300 absolute top-0 flex justify-center items-center rounded-full lg:w-24" type="submit">
             <img class="" src="./images/icon-arrow.svg" alt="icon-arrow" />
           </button>
         </div>
-        <p class="error-text">Please provide a valid email</p>
+        <p class="hidden px-6 my-2.5 text-red-500" id="error-text">Please provide a valid email</p>
       </div>
     </div>
   </body>
-  <!-- <script src="emailValidation.js"></script> -->
+  <script defer src="emailValidation.js"></script>
 </html>
