@@ -8,7 +8,7 @@ function validCheck() {
   let mailAddress = email.value;
   let emailRegex = /[A-za-z0-9_.]{3,}@[A-Za-z]+.[a-z]{2,3}$/;
   let condition = emailRegex.test(mailAddress);
-  console.log(condition);
+  // console.log(condition);
   if (!condition) {
     error.classList.remove("hidden");
     errorIcon.classList.remove("hidden");
