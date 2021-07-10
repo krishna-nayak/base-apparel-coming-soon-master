@@ -15,16 +15,16 @@ function validCheck() {
     email.classList.add("border-red-400");
     errorIcon.classList.add("animate__animated", "animate__shakeX");
     // error.classList.add("animate__animated", "animate__shakeX");
-    console.log("error ❌");
+    console.log("invalid-email ❌");
   } else {
     error.classList.add("hidden");
     errorIcon.classList.add("hidden");
     email.classList.remove("border-red-400");
-    console.log("work ✅");
+    console.log("valid-email ✅");
   }
   setTimeout(function () {
     errorIcon.classList.remove("animate__animated", "animate__shakeX");
-    console.log("animation-reset ✅");
+    // console.log("animation-reset ✅");
   }, 1000);
 }
 
