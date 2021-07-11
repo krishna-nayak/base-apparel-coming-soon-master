@@ -6,7 +6,7 @@ let errorIcon = document.querySelector("#error-icon");
 
 function validCheck() {
   let mailAddress = email.value;
-  let emailRegex = /[A-za-z0-9_.]{3,}@[A-Za-z]+.[a-z]{2,3}$/;
+  let emailRegex = /^[A-za-z0-9_.]{3,}@[A-Za-z]+\.[a-z]{2,3}$/;
   let condition = emailRegex.test(mailAddress);
   // console.log(condition);
   if (!condition) {
@@ -21,6 +21,7 @@ function validCheck() {
     errorIcon.classList.add("hidden");
     email.classList.remove("border-red-400");
     console.log("valid-email ✅");
+    window.location.reload();
   }
   setTimeout(function () {
     errorIcon.classList.remove("animate__animated", "animate__shakeX");
